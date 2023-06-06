@@ -1,5 +1,9 @@
 // Import inquirer module
 const inquirer = require('inquirer');
+// Import fs module
+const fs = require('fs');
+// Import svgCaptcha module
+const svgCaptcha = require('svg-captcha');
 
 // Creates a function for promptText which handles the text input
 function promptText() {
@@ -49,6 +53,11 @@ function promptText() {
         console.log('Entered text color:', textColor);
         console.log('Selected shape:', shape);
         console.log('Entered shape color:', shapeColor);
+
+        // Generate the logo and save it to a file
+        const captcha = svgCaptcha.create(text, { size: { width: 300, height: 200 } });
+        fs.writeFileSync('logo.svg', captcha.data);
+        console.log('Generated logo.svg');
       });
   }
   
