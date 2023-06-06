@@ -57,18 +57,21 @@ function promptText() {
 
         // Generate the SVG code based on the user-provided inputs
       if (shape === 'circle') {
-        svgContent = `<circle cx="150" cy="100" r="50" fill="${shapeColor}" />`;
+        svgContent = `<circle cx="300" cy="200" r="100" fill="${shapeColor}" />`;
       } else if (shape === 'triangle') {
-        svgContent = `<polygon points="150,20 75,180 225,180" fill="${shapeColor}" />`;
+        svgContent = `<polygon points="300,25 150,360 450,360" fill="${shapeColor}" />`;
       } else if (shape === 'square') {
-        svgContent = `<rect x="75" y="50" width="150" height="100" fill="${shapeColor}" />`;
+        svgContent = `<rect x="150" y="100" width="300" height="200" fill="${shapeColor}" />`;
       }
 
+      // Adjust the font size of the text
+      const fontSize = 48;
+
       // Add the text to the SVG code
-      svgContent += `<text x="150" y="100" text-anchor="middle" dominant-baseline="middle" fill="${textColor}">${text}</text>`;
+      svgContent += `<text x="300" y="200" text-anchor="middle" dominant-baseline="middle" fill="${textColor}" font-size="${fontSize}">${text}</text>`;
 
       // Wrap the SVG code in an <svg> element
-      const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">${svgContent}</svg>`;
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400">${svgContent}</svg>`;
 
       // Save the custom logo SVG code to the logo.svg file
       fs.writeFileSync('logo.svg', svg);
