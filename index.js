@@ -13,7 +13,7 @@ function promptText() {
           message: 'Enter up to three characters:',
           validate: function (input) {
             // Validate that the input is up to three characters
-            if (input.length < 3) {
+            if (input.length !== 3) {
               return 'Please enter up to three characters.';
             }
             return true;
