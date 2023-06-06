@@ -20,7 +20,14 @@ function promptText() {
           },
         },
         {
-        // Enter text color prompt
+            // Enter shape prompt
+            type: 'list',
+            name: 'shape',
+            message: 'Choose a shape:',
+            choices: ['circle', 'triangle', 'square'],
+        },
+        {
+            // Enter text color prompt
             type: 'input',
             name: 'textColor',
             message: 'Enter the text color (keyword or hexadecimal number):'
@@ -29,8 +36,10 @@ function promptText() {
       // Once promise is returned passes the response from user and logs the text
       .then((response) => {
         const text = response.text;
+        const shape = response.shape;
         const textColor = response.textColor;
         console.log('Entered text:', text);
+        console.log('Selected shape:', shape);
         console.log('Entered text color:', textColor);
       });
   }
