@@ -49,6 +49,8 @@ Here are some test examples I made with each shape.
 
 <img width="276" alt="Screen Shot 2023-06-08 at 10 00 40 AM" src="https://github.com/SixFourDev/svg-logo-maker/assets/127274865/da410b5e-05b7-489e-afe9-8df4c61b5971">
 
+https://github.com/SixFourDev/svg-logo-maker/assets/127274865/63a25342-68aa-48e7-8b57-92bb311c8e8e
+
 ## Questions
 
 For any questions or inquiries, feel free to reach out to me:
